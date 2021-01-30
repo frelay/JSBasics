@@ -24,14 +24,34 @@ const personalMovieDB = {
   private: false,
 };
 
-console.log(personalMovieDB.count);
+let count = 0;
+while (count < 2) {
+  const firstQuestion = prompt("Один из последних просмотренных фильмов?");
+  const secondQuestion = prompt("На сколько оцените его?");
+  if (
+    firstQuestion != null &&
+    secondQuestion != null &&
+    firstQuestion != "" &&
+    secondQuestion != "" &&
+    firstQuestion.length < 50 &&
+    secondQuestion.length < 50
+  ) {
+    personalMovieDB.movies[firstQuestion] = secondQuestion;
+  } else {
+    count--; // Возврат итерации в начало цикла
+  }
 
-const firstQuestion = prompt("Один из последних просмотренных фильмов?");
-const thirdQuestion = prompt("На сколько оцените его?");
-const secondQuestion = prompt("Один из последних просмотренных фильмов?");
-const fourthQuestion = prompt("На сколько оцените его?");
+  count++;
+}
 
-personalMovieDB.movies[firstQuestion] = thirdQuestion;
-personalMovieDB.movies[secondQuestion] = fourthQuestion;
+if (personalMovieDB.count === 10) {
+  console.log("Просмотрено довольно мало фильмов");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+  console.log("Вы классический зритель");
+} else if (personalMovieDB.count >= 30) {
+  console.log("Вы киноман");
+} else {
+  console.log("Произошла ошибка");
+}
 
 console.log(personalMovieDB);
