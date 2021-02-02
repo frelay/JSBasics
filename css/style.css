@@ -1,84 +1,78 @@
-/* Обнуление стилей */
-
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-:focus,
-:active {
-  outline: none;
-}
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
 }
 button {
-  cursor: pointer;
-}
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-a,
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-ul li {
-  list-style: none;
-}
-img {
-  vertical-align: top;
+	width: 80px;
+	height: 30px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 8px;
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: 400;
+.circle {
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	display: block;
+	margin-top: 10px;
+	border-radius: 100%;
 }
-/* Конец обнуления стилей */
+
+.heart {
+	display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+.black{
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: black;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	color: #fff;
+}
